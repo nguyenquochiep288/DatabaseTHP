@@ -1,0 +1,326 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\MyApiNetCore6\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\MyApiNetCore6\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FB85663C-B9B1-4461-8C9B-357F71510F90}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DatabaseTHP</RootNamespace>
+    <AssemblyName>DatabaseTHP</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\MyApiNetCore6\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\MyApiNetCore6\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\MVC_QuanLyTHP\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\MVC_QuanLyTHP\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\MVC_QuanLyTHP\packages\Microsoft.AspNet.Mvc.5.2.9\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\MVC_QuanLyTHP\packages\Microsoft.AspNet.Razor.3.2.9\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\MVC_QuanLyTHP\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\MVC_QuanLyTHP\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\MVC_QuanLyTHP\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TMTSecuritys, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\TMTSecuritys.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AspNetRequest.cs" />
+    <Compile Include="AspNetRole.cs" />
+    <Compile Include="AspNetRoleClaim.cs" />
+    <Compile Include="AspNetUser.cs" />
+    <Compile Include="AspNetUserClaim.cs" />
+    <Compile Include="AspNetUserLogin.cs" />
+    <Compile Include="AspNetUserToken.cs" />
+    <Compile Include="Class\API.cs" />
+    <Compile Include="Class\ApiResponse.cs" />
+    <Compile Include="Class\ApiResponseUser.cs" />
+    <Compile Include="Class\clsMaHoa.cs" />
+    <Compile Include="Class\Deposit.cs" />
+    <Compile Include="Class\Log.cs" />
+    <Compile Include="Class\Product_Detail.cs" />
+    <Compile Include="AuditLog.cs" />
+    <Compile Include="dm_BangLuong_CT.cs" />
+    <Compile Include="dm_BangLuong.cs" />
+    <Compile Include="dm_DiaDiemChamCong.cs" />
+    <Compile Include="dm_HangHoa_MoTa.cs" />
+    <Compile Include="dm_HangHoa_HinhAnh.cs" />
+    <Compile Include="nv_NghiPhep.cs" />
+    <Compile Include="nv_PhepNam.cs" />
+    <Compile Include="nv_BangLuong_ChiTiet.cs" />
+    <Compile Include="ct_PhieuDatHangNCC.cs" />
+    <Compile Include="ct_PhieuDatHangNCC_ChiTiet.cs" />
+    <Compile Include="ct_PhieuGiaoHang_HinhAnh.cs" />
+    <Compile Include="ct_PhieuGiaoHang_NhanVienGiao.cs" />
+    <Compile Include="ct_PhieuGiaoHang_ChiTiet.cs" />
+    <Compile Include="ct_PhieuGiaoHang.cs" />
+    <Compile Include="nv_ChamCong.cs" />
+    <Compile Include="dm_LichLamViec.cs" />
+    <Compile Include="dm_KPI_KinhDoanh_NhanVien.cs" />
+    <Compile Include="dm_KPI_KinhDoanh_YeuCau.cs" />
+    <Compile Include="dm_KPI_KinhDoanh.cs" />
+    <Compile Include="dm_LoaiLuong.cs" />
+    <Compile Include="nv_BangLuong.cs" />
+    <Compile Include="dm_ThangLuong.cs" />
+    <Compile Include="dm_Xe.cs" />
+    <Compile Include="StoredProcedure\Sp_Get_BaoCaoGiaoHang_Result.cs" />
+    <Compile Include="StoredProcedure\Sp_Get_BaoCaoTaiChinh_New_Result.cs" />
+    <Compile Include="StoredProcedure\Sp_Get_BaoCaoTheoNhanVien_Result.cs" />
+    <Compile Include="StoredProcedure\Sp_Get_DanhSachHangHoa.cs" />
+    <Compile Include="View\view_nv_BangLuong_ChiTiet.cs" />
+    <Compile Include="View\view_nv_PhepNam.cs" />
+    <Compile Include="View\view_dm_BangLuong.cs" />
+    <Compile Include="View\v_dm_BangLuong_CT.cs" />
+    <Compile Include="View\v_dm_BangLuong.cs" />
+    <Compile Include="View\v_dm_DiaDiemChamCong.cs" />
+    <Compile Include="View\v_dm_HangHoa_MoTa.cs" />
+    <Compile Include="View\v_dm_HangHoa_HinhAnh.cs" />
+    <Compile Include="View\v_nv_NghiPhep.cs" />
+    <Compile Include="View\v_nv_PhepNam.cs" />
+    <Compile Include="View\v_nv_BangLuong_ChiTiet.cs" />
+    <Compile Include="View\v_nv_ChamCong.cs" />
+    <Compile Include="View\v_dm_LoaiLuong.cs" />
+    <Compile Include="View\v_nv_BangLuong.cs" />
+    <Compile Include="View\v_dm_ThangLuong.cs" />
+    <Compile Include="View\view_nv_BangLuong.cs" />
+    <Compile Include="StoredProcedure\Sp_Get_DanhSachBangLuong_Result.cs" />
+    <Compile Include="StoredProcedure\Sp_Get_ThongKeThuChi_Result.cs" />
+    <Compile Include="StoredProcedure\Sp_Get_DanhSachHangHoa_Result.cs" />
+    <Compile Include="StoredProcedure\Sp_Get_DanhSachPhieuGiaoHang_KPI_Result.cs" />
+    <Compile Include="StoredProcedure\Sp_Get_DanhSachPhieuXuatHang_KhuyenMai.cs" />
+    <Compile Include="StoredProcedure\Sp_Get_BaoCaoTaiChinh_Result.cs" />
+    <Compile Include="View\DanhSachPhieuTraHang_ChiTiet_KPI.cs" />
+    <Compile Include="View\view_dm_KPI_KinhDoanh.cs" />
+    <Compile Include="View\view_dm_KPI_KinhDoanh_NhanVien.cs" />
+    <Compile Include="View\view_dm_KPI_KinhDoanh_YeuCau.cs" />
+    <Compile Include="View\DanhSachPhieuDatHang_ChiTiet_KPI.cs" />
+    <Compile Include="View\Sp_Get_DanhSachPhieuGiaoHang_In.cs" />
+    <Compile Include="View\v_ct_PhieuDatHang_ChiTiet_BaoCao.cs" />
+    <Compile Include="View\v_ct_PhieuGiaoHang_HinhAnh.cs" />
+    <Compile Include="View\v_ct_PhieuDatHangNCC.cs" />
+    <Compile Include="View\v_ct_PhieuDatHangNCC_ChiTiet.cs" />
+    <Compile Include="View\v_dm_LichLamViec.cs" />
+    <Compile Include="View\v_ThongKeQuyTien.cs" />
+    <Compile Include="View\v_ThongKeCongNoNhanVien.cs" />
+    <Compile Include="View\v_ThongKeCongNo_ChiTiet.cs" />
+    <Compile Include="View\v_Tinh_KPI_KinhDoanh.cs" />
+    <Compile Include="View\v_dm_KPI_KinhDoanh.cs" />
+    <Compile Include="View\v_dm_KPI_KinhDoanh_NhanVien.cs" />
+    <Compile Include="View\v_dm_KPI_KinhDoanh_YeuCau.cs" />
+    <Compile Include="View\v_ThongKeTonKhoHangHoa.cs" />
+    <Compile Include="View\v_ThongKeCongNoNhaCungCap.cs" />
+    <Compile Include="View\v_ThongKeCongNoKhachHang.cs" />
+    <Compile Include="View\v_ct_PhieuGiaoHang_NhanVienGiao.cs" />
+    <Compile Include="View\v_ct_PhieuGiaoHang_ChiTiet.cs" />
+    <Compile Include="View\v_ct_PhieuGiaoHang.cs" />
+    <Compile Include="View\v_dm_Xe.cs" />
+    <Compile Include="View\view_web_Quyen.cs" />
+    <Compile Include="View\v_view_dm_KPI_KinhDoanh.cs" />
+    <Compile Include="View\v_web_Report_Parameter.cs" />
+    <Compile Include="View\v_web_Parameter.cs" />
+    <Compile Include="View\v_web_Report.cs" />
+    <Compile Include="View\view_web_Report.cs" />
+    <Compile Include="View\view_web_Report_Parameter.cs" />
+    <Compile Include="web_Report_Parameter.cs" />
+    <Compile Include="web_Parameter.cs" />
+    <Compile Include="web_Report.cs" />
+    <Compile Include="ct_PhieuChi.cs" />
+    <Compile Include="ct_PhieuChuyen.cs" />
+    <Compile Include="ct_PhieuChuyen_ChiTiet.cs" />
+    <Compile Include="ct_PhieuDatHang_ChiTiet.cs" />
+    <Compile Include="ct_PhieuDatHang.cs" />
+    <Compile Include="ct_PhieuNhap.cs" />
+    <Compile Include="ct_PhieuNhap_ChiTiet.cs" />
+    <Compile Include="ct_PhieuThu.cs" />
+    <Compile Include="ct_PhieuXuat.cs" />
+    <Compile Include="ct_PhieuXuat_ChiTiet.cs" />
+    <Compile Include="C__EFMigrationsHistory.cs" />
+    <Compile Include="dbTrangHiepPhat.cs" />
+    <Compile Include="dm_ChucVu.cs" />
+    <Compile Include="dm_ChuongTrinhKhuyenMai.cs" />
+    <Compile Include="dm_ChuongTrinhKhuyenMai_Tang.cs" />
+    <Compile Include="dm_ChuongTrinhKhuyenMai_YeuCau.cs" />
+    <Compile Include="dm_CongTy.cs" />
+    <Compile Include="dm_DonViTinh.cs" />
+    <Compile Include="dm_HangHoa.cs" />
+    <Compile Include="dm_HangHoa_Combo.cs" />
+    <Compile Include="dm_HangHoa_Kho.cs" />
+    <Compile Include="dm_KhachHang.cs" />
+    <Compile Include="dm_Kho.cs" />
+    <Compile Include="dm_KhuVuc.cs" />
+    <Compile Include="dm_LoaiPhieuXuat.cs" />
+    <Compile Include="dm_LoaiPhieuNhap.cs" />
+    <Compile Include="dm_LoaiPhieuChi.cs" />
+    <Compile Include="dm_LoaiPhieuThu.cs" />
+    <Compile Include="dm_NhaCungCap.cs" />
+    <Compile Include="dm_NhanVien.cs" />
+    <Compile Include="dm_NhomHangHoa.cs" />
+    <Compile Include="dm_NhomNhaCungCap.cs" />
+    <Compile Include="dm_NhomKhachHang.cs" />
+    <Compile Include="dm_PhongBan.cs" />
+    <Compile Include="dm_TaiKhoanNganHang.cs" />
+    <Compile Include="dm_ThueSuat.cs" />
+    <Compile Include="dm_TienTe.cs" />
+    <Compile Include="INV_DEPOSIT_DTL_TEMP.cs" />
+    <Compile Include="INV_DEPOSIT_TEMP.cs" />
+    <Compile Include="LogError.cs" />
+    <Compile Include="StoredProcedure\Parameter\SP_Parameter_Report.cs" />
+    <Compile Include="StoredProcedure\Parameter\SP_Parameter.cs" />
+    <Compile Include="StoredProcedure\web_Sp_Get_DSKhachHang_Result.cs" />
+    <Compile Include="StoredProcedure\web_Sp_Get_DSKhuVuc_Result.cs" />
+    <Compile Include="StoredProcedure\web_Sp_Get_DSNhomSanPham_Result.cs" />
+    <Compile Include="StoredProcedure\web_Sp_Get_DSSanPham_Result.cs" />
+    <Compile Include="StoredProcedure\web_Sp_Get_KhachHang_Result.cs" />
+    <Compile Include="StoredProcedure\web_Sp_Get_DanhSachKhuyenMai_Result.cs" />
+    <Compile Include="StoredProcedure\web_Sp_Get_SanPham_Combo_Result.cs" />
+    <Compile Include="StoredProcedure\Sp_Get_DanhSachSanPhamKho_Result.cs" />
+    <Compile Include="StoredProcedure\web_Sp_Get_SanPham_Group_Result.cs" />
+    <Compile Include="StoredProcedure\web_Sp_Get_SanPham_Result.cs" />
+    <Compile Include="Treeview\Treeview.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StoredProcedure\web_Sp_Get_DanhSachChietKhauHoaDon_Result.cs" />
+    <Compile Include="View\view_AspNetUser.cs" />
+    <Compile Include="View\view_dm_ChuongTrinhKhuyenMai_YeuCau.cs" />
+    <Compile Include="View\view_dm_ChuongTrinhKhuyenMai_Tang.cs" />
+    <Compile Include="View\v_ct_PhieuDatHang.cs" />
+    <Compile Include="View\v_ct_PhieuDatHang_ChiTiet.cs" />
+    <Compile Include="View\v_view_dm_ChuongTrinhKhuyenMai.cs" />
+    <Compile Include="View\view_dm_HangHoa_Combo.cs" />
+    <Compile Include="View\view_dm_HangHoa.cs" />
+    <Compile Include="View\view_dm_NhanVien.cs" />
+    <Compile Include="View\view_dm_KhachHang.cs" />
+    <Compile Include="View\view_dm_NhaCungCap.cs" />
+    <Compile Include="View\view_web_PhanQuyen.cs" />
+    <Compile Include="View\v_AspNetUsers.cs" />
+    <Compile Include="View\v_ct_PhieuChi.cs" />
+    <Compile Include="View\v_ct_PhieuNhap.cs" />
+    <Compile Include="View\v_ct_PhieuNhap_ChiTiet.cs" />
+    <Compile Include="View\v_ct_PhieuThu.cs" />
+    <Compile Include="View\v_ct_PhieuXuat.cs" />
+    <Compile Include="View\v_ct_PhieuXuat_ChiTiet.cs" />
+    <Compile Include="View\view_dm_ChuongTrinhKhuyenMai.cs" />
+    <Compile Include="View\v_dm_ChuongTrinhKhuyenMai.cs" />
+    <Compile Include="View\v_dm_ChuongTrinhKhuyenMai_Tang.cs" />
+    <Compile Include="View\v_dm_ChuongTrinhKhuyenMai_YeuCau.cs" />
+    <Compile Include="View\v_dm_NhomNhaCungCap.cs" />
+    <Compile Include="View\v_web_PhanQuyen.cs" />
+    <Compile Include="View\v_web_Quyen.cs" />
+    <Compile Include="View\v_dm_CongTy.cs" />
+    <Compile Include="View\v_dm_ChucVu.cs" />
+    <Compile Include="View\v_dm_DonViTinh.cs" />
+    <Compile Include="View\v_dm_HangHoa.cs" />
+    <Compile Include="View\v_dm_HangHoa_Combo.cs" />
+    <Compile Include="View\v_dm_HangHoa_Kho.cs" />
+    <Compile Include="View\v_dm_KhachHang.cs" />
+    <Compile Include="View\v_dm_Kho.cs" />
+    <Compile Include="View\v_dm_KhuVuc.cs" />
+    <Compile Include="View\v_dm_LoaiPhieuChi.cs" />
+    <Compile Include="View\v_dm_LoaiPhieuNhap.cs" />
+    <Compile Include="View\v_dm_LoaiPhieuThu.cs" />
+    <Compile Include="View\v_dm_LoaiPhieuXuat.cs" />
+    <Compile Include="View\v_dm_NhaCungCap.cs" />
+    <Compile Include="View\v_dm_NhanVien.cs" />
+    <Compile Include="View\v_dm_NhomHangHoa.cs" />
+    <Compile Include="View\v_dm_NhomKhachHang.cs" />
+    <Compile Include="View\v_dm_PhongBan.cs" />
+    <Compile Include="View\v_dm_TaiKhoanNganHang.cs" />
+    <Compile Include="View\v_dm_ThueSuat.cs" />
+    <Compile Include="View\v_dm_TienTe.cs" />
+    <Compile Include="View\v_web_Menu.cs" />
+    <Compile Include="View\v_web_NhomQuyen.cs" />
+    <Compile Include="View\view_web_Menu.cs" />
+    <Compile Include="View\view_web_NoteClass.cs" />
+    <Compile Include="web_ThongBao.cs" />
+    <Compile Include="web_Menu.cs" />
+    <Compile Include="web_NhomQuyen.cs" />
+    <Compile Include="web_NoteClass.cs" />
+    <Compile Include="web_NoteTable.cs" />
+    <Compile Include="web_NoteType.cs" />
+    <Compile Include="web_PhanQuyen.cs" />
+    <Compile Include="web_PhanQuyenKhachHang.cs" />
+    <Compile Include="web_PhanQuyenKhuVuc.cs" />
+    <Compile Include="web_PhanQuyenNhomKhachHang.cs" />
+    <Compile Include="web_PhanQuyenNhomSanPham.cs" />
+    <Compile Include="web_PhanQuyenSanPham.cs" />
+    <Compile Include="web_Quyen.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Class\View\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\MyApiNetCore6\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\MyApiNetCore6\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\MyApiNetCore6\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\MyApiNetCore6\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\MyApiNetCore6\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\MyApiNetCore6\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
