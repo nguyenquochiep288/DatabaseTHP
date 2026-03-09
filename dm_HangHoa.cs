@@ -1,12 +1,18 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: DatabaseTHP.dm_HangHoa
+// Assembly: DatabaseTHP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+// MVID: B9ADA26D-FEE8-4EBF-A8E2-7EEA7E056CE8
+// Assembly location: G:\MyApiNetCore6-03_Authentication_New\Publish_API\DatabaseTHP.dll
+
+using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+
 namespace DatabaseTHP
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
 
-    public partial class dm_HangHoa
+    public class dm_HangHoa
     {
         [Key]
         [Column(Order = 0)]
@@ -42,6 +48,7 @@ namespace DatabaseTHP
         public double GIA03_QD { get; set; }
 
         public double GIAMUA { get; set; }
+
         public double GIAMUA_QD { get; set; }
 
         [Required]
@@ -95,5 +102,13 @@ namespace DatabaseTHP
         public bool ISKHONGHIENTHITONKHO { get; set; }
 
         public bool ISKHONGDUOCPHEPSUA { get; set; }
+
+        public bool ISKHUYENMAI { get; set; }
+
+        public string NAME_XHD { get; set; }
+
+        public bool ISXUATHOADON { get; set; }
+
+        public string VAT { get; set; }
     }
 }

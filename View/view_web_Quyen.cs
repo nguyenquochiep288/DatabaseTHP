@@ -1,12 +1,13 @@
-using DatabaseTHP;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
+﻿// Decompiled with JetBrains decompiler
+// Type: DatabaseTHP.view_web_Quyen
+// Assembly: DatabaseTHP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+// MVID: B9ADA26D-FEE8-4EBF-A8E2-7EEA7E056CE8
+// Assembly location: G:\MyApiNetCore6-03_Authentication_New\Publish_API\DatabaseTHP.dll
+
 
 namespace DatabaseTHP
 {
+
     public class view_web_Quyen
     {
         public string LOC_ID { get; set; }
@@ -18,7 +19,9 @@ namespace DatabaseTHP
         public string TENQUYEN { get; set; }
 
         public string ID_MENU { get; set; }
+
         public string MOTA { get; set; }
+
         public string NAME_MENU { get; set; }
     }
 }

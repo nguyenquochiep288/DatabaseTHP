@@ -1,17 +1,23 @@
-using DatabaseTHP;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿// Decompiled with JetBrains decompiler
+// Type: DatabaseTHP.v_nv_ChamCong
+// Assembly: DatabaseTHP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+// MVID: B9ADA26D-FEE8-4EBF-A8E2-7EEA7E056CE8
+// Assembly location: G:\MyApiNetCore6-03_Authentication_New\Publish_API\DatabaseTHP.dll
+
 
 namespace DatabaseTHP
 {
+
     public class v_nv_ChamCong : nv_ChamCong
     {
         public string MA_NHANVIEN { get; set; }
+
         public string NAME_NHANVIEN { get; set; }
+
         public string NAME_THANGLUONG { get; set; }
+
         public string LATITUDELONGITUDE { get; set; }
+
         public string MYPUBLICIPV4 { get; set; }
 
         public string BUTTONTYPE { get; set; }

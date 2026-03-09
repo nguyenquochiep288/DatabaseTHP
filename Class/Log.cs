@@ -1,40 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Net.Mime.MediaTypeNames;
+﻿// Decompiled with JetBrains decompiler
+// Type: DatabaseTHP.Class.Log
+// Assembly: DatabaseTHP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+// MVID: B9ADA26D-FEE8-4EBF-A8E2-7EEA7E056CE8
+// Assembly location: G:\MyApiNetCore6-03_Authentication_New\Publish_API\DatabaseTHP.dll
 
-namespace DatabaseTHP.Class
+using System;
+using System.Diagnostics;
+
+
+namespace DatabaseTHP
 {
+
     internal class Log
     {
-        public static void WriteLog(string ActionName , string ControllerName, Exception e)
+        public static void WriteLog(string ActionName, string ControllerName, Exception e)
         {
             try
             {
-                System.Diagnostics.StackTrace trace = new System.Diagnostics.StackTrace(e, true);
-                StackFrame stf = trace.GetFrame(0);
-                string sCName = ((System.Reflection.MemberInfo)(stf.GetMethod())).DeclaringType.FullName;
-                string MethodName = stf.GetMethod().Name;
-                int ix = stf.GetFileLineNumber();
-                
-                //StreamWriter log;
-
-                //// Write to the file:
-                //string strError = e.Message;
-                //log.WriteLine("**************************Class==>" + sCName + "*************************");
-                //log.WriteLine("Time==>" + DateTime.Now);
-                //log.WriteLine("Method==>" + MethodName);
-                //log.WriteLine("Error msg==> Line number: " + ix.ToString() + ", Error excuting: " + strError);
-                //log.WriteLine();
-                //// Close the stream:
-                //log.Close();
+                StackFrame frame = new StackTrace(e, true).GetFrame(0);
+                string fullName = frame.GetMethod().DeclaringType.FullName;
+                string name = frame.GetMethod().Name;
+                frame.GetFileLineNumber();
             }
-            catch 
-            { 
+            catch
+            {
             }
         }
     }

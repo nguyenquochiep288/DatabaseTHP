@@ -1,23 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Web;
-using System.Diagnostics;
-using Microsoft.VisualBasic;
-namespace DatabaseTHP.Class
+﻿// Decompiled with JetBrains decompiler
+// Type: DatabaseTHP.Class.clsMaHoa
+// Assembly: DatabaseTHP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+// MVID: B9ADA26D-FEE8-4EBF-A8E2-7EEA7E056CE8
+// Assembly location: G:\MyApiNetCore6-03_Authentication_New\Publish_API\DatabaseTHP.dll
+
+
+namespace DatabaseTHP
 {
+
     public class clsMaHoa
     {
         public const string PassMaHoa = "tmt6364";
-        static TMTSecuritys.clsMaHoa tmtSecuritys = new TMTSecuritys.clsMaHoa();
+        private static TMTSecuritys.clsMaHoa tmtSecuritys = new TMTSecuritys.clsMaHoa();
+
         public static string Encrypt(string plainText, string code)
         {
             try
             {
-                return tmtSecuritys.Encrypt(plainText, code);
+                return clsMaHoa.tmtSecuritys.Encrypt(plainText, code);
             }
             catch
             {
@@ -29,7 +29,7 @@ namespace DatabaseTHP.Class
         {
             try
             {
-                return tmtSecuritys.Decrypt(cipherText, code);
+                return clsMaHoa.tmtSecuritys.Decrypt(cipherText, code);
             }
             catch
             {

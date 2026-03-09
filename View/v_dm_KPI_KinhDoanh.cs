@@ -1,11 +1,15 @@
-using DatabaseTHP;
-using System;
+﻿// Decompiled with JetBrains decompiler
+// Type: DatabaseTHP.v_dm_KPI_KinhDoanh
+// Assembly: DatabaseTHP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+// MVID: B9ADA26D-FEE8-4EBF-A8E2-7EEA7E056CE8
+// Assembly location: G:\MyApiNetCore6-03_Authentication_New\Publish_API\DatabaseTHP.dll
+
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+
 
 namespace DatabaseTHP
 {
+
     public class v_dm_KPI_KinhDoanh : dm_KPI_KinhDoanh
     {
         public List<v_dm_KPI_KinhDoanh_YeuCau> lstdm_KPI_KinhDoanh_YeuCau { get; set; }
@@ -13,6 +17,7 @@ namespace DatabaseTHP
         public List<v_dm_KPI_KinhDoanh_NhanVien> lstdm_KPI_KinhDoanh_NhanVien { get; set; }
 
         public string NAME_DVT { get; set; }
+
         public bool CHON { get; set; }
     }
 }

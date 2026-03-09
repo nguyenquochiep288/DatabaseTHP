@@ -1,15 +1,16 @@
-﻿namespace DatabaseTHP
-{
-    using DatabaseTHP.Class;
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
-    using System.Diagnostics.SymbolStore;
-    using System.Linq;
+﻿// Decompiled with JetBrains decompiler
+// Type: DatabaseTHP.view_dm_HangHoa
+// Assembly: DatabaseTHP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+// MVID: B9ADA26D-FEE8-4EBF-A8E2-7EEA7E056CE8
+// Assembly location: G:\MyApiNetCore6-03_Authentication_New\Publish_API\DatabaseTHP.dll
 
-    public partial class view_dm_HangHoa
+using System;
+
+
+namespace DatabaseTHP
+{
+
+    public class view_dm_HangHoa
     {
         public string LOC_ID { get; set; }
 
@@ -46,6 +47,7 @@
         public bool BAOGOMTHUESUAT { get; set; }
 
         public string ID_THUESUAT { get; set; }
+
         public bool ISCOMBO { get; set; }
 
         public string ID_DVT { get; set; }
@@ -89,5 +91,13 @@
         public bool ISKHONGHIENTHITONKHO { get; set; }
 
         public bool ISKHONGDUOCPHEPSUA { get; set; }
+
+        public bool ISKHUYENMAI { get; set; }
+
+        public string NAME_XHD { get; set; }
+
+        public bool ISXUATHOADON { get; set; }
+
+        public string VAT { get; set; }
     }
 }

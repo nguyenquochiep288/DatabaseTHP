@@ -1,12 +1,16 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: DatabaseTHP.view_dm_NhanVien
+// Assembly: DatabaseTHP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+// MVID: B9ADA26D-FEE8-4EBF-A8E2-7EEA7E056CE8
+// Assembly location: G:\MyApiNetCore6-03_Authentication_New\Publish_API\DatabaseTHP.dll
+
+using System;
+
+
 namespace DatabaseTHP
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
 
-    public partial class view_dm_NhanVien
+    public class view_dm_NhanVien
     {
         public string LOC_ID { get; set; }
 
@@ -51,6 +55,7 @@ namespace DatabaseTHP
         public string ID_NGUOITAO { get; set; }
 
         public bool ISACTIVE { get; set; }
+
         public string ID_TAIKHOAN { get; set; }
 
         public string UserName { get; set; }
@@ -60,6 +65,7 @@ namespace DatabaseTHP
         public double CONGNODAUKY { get; set; }
 
         public double LUONGCOBAN { get; set; }
+
         public double SONGAYPHEP { get; set; }
     }
 }

@@ -1,13 +1,16 @@
-using DatabaseTHP;
+﻿// Decompiled with JetBrains decompiler
+// Type: DatabaseTHP.view_dm_ChuongTrinhKhuyenMai
+// Assembly: DatabaseTHP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+// MVID: B9ADA26D-FEE8-4EBF-A8E2-7EEA7E056CE8
+// Assembly location: G:\MyApiNetCore6-03_Authentication_New\Publish_API\DatabaseTHP.dll
+
 using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
+
 
 namespace DatabaseTHP
 {
+
     public class view_dm_ChuongTrinhKhuyenMai
     {
         [StringLength(50)]
@@ -52,13 +55,17 @@ namespace DatabaseTHP
         public string ID_NGUOITAO { get; set; }
 
         public string NAME_DVT { get; set; }
+
         public bool ISTONGHOADON { get; set; }
 
         public string CHUONGTRINHKHUYENMAIDICUNG { get; set; }
 
         public bool ISTINHLUYTUYEN { get; set; }
+
         public int HINHTHUC_TINHKPI { get; set; }
+
         public double SOLUONG_DATKM_DEN { get; set; }
+
         public double TONGTIEN_DATKM_DEN { get; set; }
     }
 }

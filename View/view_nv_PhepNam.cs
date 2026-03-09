@@ -1,24 +1,31 @@
-﻿namespace DatabaseTHP
-{
-    using DatabaseTHP.Class;
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
-    using System.Diagnostics.SymbolStore;
-    using System.Linq;
+﻿// Decompiled with JetBrains decompiler
+// Type: DatabaseTHP.view_nv_PhepNam
+// Assembly: DatabaseTHP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+// MVID: B9ADA26D-FEE8-4EBF-A8E2-7EEA7E056CE8
+// Assembly location: G:\MyApiNetCore6-03_Authentication_New\Publish_API\DatabaseTHP.dll
 
-    public partial class view_nv_PhepNam
+using System;
+
+
+namespace DatabaseTHP
+{
+
+    public class view_nv_PhepNam
     {
         public string LOC_ID { get; set; }
 
         public string ID { get; set; }
+
         public string ID_NHANVIEN { get; set; }
+
         public double NAM { get; set; }
+
         public DateTime NGAYBATDAU { get; set; }
+
         public DateTime NGAYKETTHUC { get; set; }
+
         public double SONGAYPHEP { get; set; }
+
         public double SONGAYPHEPDADUNG { get; set; }
 
         public DateTime? THOIGIANSUA { get; set; }
@@ -30,6 +37,7 @@
         public string ID_NGUOITAO { get; set; }
 
         public string MA_NHANVIEN { get; set; }
+
         public string NAME_NHANVIEN { get; set; }
     }
 }

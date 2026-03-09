@@ -1,13 +1,16 @@
-using DatabaseTHP;
-using System;
+﻿// Decompiled with JetBrains decompiler
+// Type: DatabaseTHP.view_web_Report
+// Assembly: DatabaseTHP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+// MVID: B9ADA26D-FEE8-4EBF-A8E2-7EEA7E056CE8
+// Assembly location: G:\MyApiNetCore6-03_Authentication_New\Publish_API\DatabaseTHP.dll
+
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
+
 
 namespace DatabaseTHP
 {
+
     public class view_web_Report
     {
         [StringLength(50)]
@@ -33,6 +36,6 @@ namespace DatabaseTHP
 
         public string NAME_MENU { get; set; }
 
-        public List<v_web_Report_Parameter> lstweb_Report_Parameter { get; set;}
+        public List<v_web_Report_Parameter> lstweb_Report_Parameter { get; set; }
     }
 }

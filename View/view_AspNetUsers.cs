@@ -1,35 +1,35 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: DatabaseTHP.view_AspNetUsers
+// Assembly: DatabaseTHP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+// MVID: B9ADA26D-FEE8-4EBF-A8E2-7EEA7E056CE8
+// Assembly location: G:\MyApiNetCore6-03_Authentication_New\Publish_API\DatabaseTHP.dll
+
+using System;
+using System.ComponentModel.DataAnnotations;
+
+
 namespace DatabaseTHP
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
 
-    public partial class view_AspNetUsers
+    public class view_AspNetUsers
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public view_AspNetUsers()
-        {
-        }
-
         [StringLength(50)]
         public string ID { get; set; }
 
         [Required]
-        [StringLength(256)]
+        [StringLength(256 /*0x0100*/)]
         public string FullName { get; set; }
 
-        [StringLength(256)]
+        [StringLength(256 /*0x0100*/)]
         public string UserName { get; set; }
 
-        [StringLength(256)]
+        [StringLength(256 /*0x0100*/)]
         public string NormalizedUserName { get; set; }
 
-        [StringLength(256)]
+        [StringLength(256 /*0x0100*/)]
         public string Email { get; set; }
 
-        [StringLength(256)]
+        [StringLength(256 /*0x0100*/)]
         public string NormalizedEmail { get; set; }
 
         public bool EmailConfirmed { get; set; }

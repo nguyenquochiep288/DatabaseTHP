@@ -1,23 +1,34 @@
-using DatabaseTHP;
-using DatabaseTHP.Class;
+﻿// Decompiled with JetBrains decompiler
+// Type: DatabaseTHP.v_ThongKeQuyTien
+// Assembly: DatabaseTHP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+// MVID: B9ADA26D-FEE8-4EBF-A8E2-7EEA7E056CE8
+// Assembly location: G:\MyApiNetCore6-03_Authentication_New\Publish_API\DatabaseTHP.dll
+
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace DatabaseTHP
 {
+
     public class v_ThongKeQuyTien : v_dm_TaiKhoanNganHang
     {
         public double TONGTIENCONGNODAUKY { get; set; }
+
         public double TONGTIENPHIEUXUAT { get; set; }
+
         public double TONGTIENPHIEUNHAP { get; set; }
+
         public double TONGTIENPHIEUTHU { get; set; }
+
         public double TONGTIENPHIEUCHI { get; set; }
+
         public double TONGTIENCONGNOCUOIKY { get; set; }
+
         public bool ISTHEOTHOIGIAN { get; set; }
+
         public DateTime TUNGAY { get; set; }
+
         public DateTime DENNGAY { get; set; }
+
         public string ID_TAIKHOANNGANHANG { get; set; }
     }
 }
