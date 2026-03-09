@@ -174,6 +174,15 @@
     <Compile Include="View\v_web_Report.cs" />
     <Compile Include="View\view_web_Report.cs" />
     <Compile Include="View\view_web_Report_Parameter.cs" />
+    <Compile Include="view_dm_HangHoa_KhungGia_HangHoa.cs" />
+    <Compile Include="v_dm_HangHoa_KhungGia.cs" />
+    <Compile Include="v_dm_HangHoa_KhungGia_HangHoa.cs" />
+    <Compile Include="v_dm_HangHoa_KhungGia_Master.cs" />
+    <Compile Include="v_view_dm_HangHoa_KhungGia.cs" />
+    <Compile Include="v_v_dm_HangHoa_KhungGia.cs" />
+    <Compile Include="v_v_dm_HangHoa_KhungGia_HangHoa.cs" />
+    <Compile Include="v_v_dm_HangHoa_KhungGia_Master.cs" />
+    <Compile Include="v_v_view_dm_HangHoa_KhungGia.cs" />
     <Compile Include="web_Report_Parameter.cs" />
     <Compile Include="web_Parameter.cs" />
     <Compile Include="web_Report.cs" />
