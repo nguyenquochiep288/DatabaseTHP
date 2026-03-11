@@ -235,6 +235,7 @@ namespace DatabaseTHP.Class
         public const string TitleTryCatch = "Đã có lỗi phát sinh trong phiên làm việc!";
         public const string PathLogo = "/Images_Upload/Logo/";
         public const string PathProduct = "/Images_Upload/Product/";
+        public const string PathCustomer = "/Images_Upload/Customer/";
         public const string PathUser = "/Images_Upload/User/";
         public const string PathDelivery_Image = "/Images_Upload/Delivery/";
         public const string PathProductServer = "C:\\FTP\\Images_Upload\\Product";

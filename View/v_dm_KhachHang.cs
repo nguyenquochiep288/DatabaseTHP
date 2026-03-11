@@ -23,5 +23,9 @@ namespace DatabaseTHP
         public double? LONGITUDE { get; set; }
 
         public string CONTENT_MAP { get; set; }
+
+        public string FILEBASE64 { get; set; }
+
+        public bool FILENEW { get; set; }
     }
 }

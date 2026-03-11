@@ -77,5 +77,7 @@ namespace DatabaseTHP
         public string TENDONVI { get; set; }
 
         public string TENKHACHHANG { get; set; }
+
+        public string PICTURE { get; set; }
     }
 }

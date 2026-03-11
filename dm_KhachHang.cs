@@ -95,5 +95,8 @@ namespace DatabaseTHP
 
         [StringLength(50)]
         public string MASOTHUE { get; set; }
+
+        [StringLength(250)]
+        public string PICTURE { get; set; }
     }
 }
