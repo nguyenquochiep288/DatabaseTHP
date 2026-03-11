@@ -5,17 +5,19 @@
 // Assembly location: G:\MyApiNetCore6-03_Authentication_New\Publish_API\DatabaseTHP.dll
 
 
-namespace DatabaseTHP.Class.Misa;
-
-public class MisaApiResponseInvoiced_Error
+namespace DatabaseTHP.Class.Misa
 {
-  public string RefID { get; set; }
 
-  public string InvSeries { get; set; }
+    public class MisaApiResponseInvoiced_Error
+    {
+        public string RefID { get; set; }
 
-  public string InvDate { get; set; }
+        public string InvSeries { get; set; }
 
-  public string ErrorMessage { get; set; }
+        public string InvDate { get; set; }
 
-  public int EInvoiceStatus { get; set; }
+        public string ErrorMessage { get; set; }
+
+        public int EInvoiceStatus { get; set; }
+    }
 }

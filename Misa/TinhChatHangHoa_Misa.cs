@@ -5,13 +5,15 @@
 // Assembly location: G:\MyApiNetCore6-03_Authentication_New\Publish_API\DatabaseTHP.dll
 
 
-namespace DatabaseTHP.Class.Misa;
-
-public enum TinhChatHangHoa_Misa
+namespace DatabaseTHP.Class.Misa
 {
-  HangHoaDichVu = 0,
-  KhuyenMai = 2,
-  GhiChuDienGiai = 3,
-  ChietKhauThuongMai = 4,
-  HangHoaDacThu = 6,
+
+    public enum TinhChatHangHoa_Misa
+    {
+        HangHoaDichVu = 0,
+        KhuyenMai = 2,
+        GhiChuDienGiai = 3,
+        ChietKhauThuongMai = 4,
+        HangHoaDacThu = 6,
+    }
 }

@@ -7,21 +7,23 @@
 using System;
 
 
-namespace DatabaseTHP.Class.Misa;
-
-public class MisaInvoiceInfo
+namespace DatabaseTHP.Class.Misa
 {
-  public string TransactionID { get; set; }
 
-  public string InvNo { get; set; }
+    public class MisaInvoiceInfo
+    {
+        public string TransactionID { get; set; }
 
-  public string InvoiceCode { get; set; }
+        public string InvNo { get; set; }
 
-  public string RefID { get; set; }
+        public string InvoiceCode { get; set; }
 
-  public string InvSeries { get; set; }
+        public string RefID { get; set; }
 
-  public DateTime InvDate { get; set; }
+        public string InvSeries { get; set; }
 
-  public DateTime? PublishingTime { get; set; }
+        public DateTime InvDate { get; set; }
+
+        public DateTime? PublishingTime { get; set; }
+    }
 }

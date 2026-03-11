@@ -7,17 +7,19 @@
 using System.Collections.Generic;
 
 
-namespace DatabaseTHP.Class.Misa;
-
-public class MisaApiResponseInvoiced
+namespace DatabaseTHP.Class.Misa
 {
-  public bool success { get; set; }
 
-  public string data { get; set; }
+    public class MisaApiResponseInvoiced
+    {
+        public bool success { get; set; }
 
-  public string error { get; set; }
+        public string data { get; set; }
 
-  public string error_description { get; set; }
+        public string error { get; set; }
 
-  public List<string> errorCode { get; set; }
+        public string error_description { get; set; }
+
+        public List<string> errorCode { get; set; }
+    }
 }

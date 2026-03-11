@@ -5,13 +5,15 @@
 // Assembly location: G:\MyApiNetCore6-03_Authentication_New\Publish_API\DatabaseTHP.dll
 
 
-namespace DatabaseTHP.Class.Misa;
-
-public class MisaTokenRequest
+namespace DatabaseTHP.Class.Misa
 {
-  public string TaxCode { get; set; }
 
-  public string Username { get; set; }
+    public class MisaTokenRequest
+    {
+        public string TaxCode { get; set; }
 
-  public string Password { get; set; }
+        public string Username { get; set; }
+
+        public string Password { get; set; }
+    }
 }

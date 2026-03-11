@@ -10,6 +10,8 @@ namespace DatabaseTHP
 {
     public class Product_Detail : view_dm_HangHoa
     {
+        public int TINHCHAT { get; set; }
+
         public bool ISEDIT { get; set; }
 
         public string ID_LOC { get; set; }
@@ -45,24 +47,42 @@ namespace DatabaseTHP
         public string ID_HANGHOA { get; set; }
 
         public string ID_DVT_COMBO { get; set; }
+
         public double QTY_COMBO { get; set; }
+
         public double TYLE_QD_COMBO { get; set; }
+
         public double QTY_TOTAL_COMBO { get; set; }
+
         public double QTY { get; set; }
+
         public string ID_COMBO { get; set; }
-        public bool ISKHUYENMAI { get; set; }
+
         public string ID_KHUYENMAI { get; set; }
+
         public bool ISDALAYKHUYENMAI { get; set; }
+
         public double SOLUONGDALAYKHUYENMAI { get; set; }
+
         public int STT { get; set; }
+
         public string ID_PHIEUDIEUHANG_CHITIET { get; set; }
+
         public string ID_PHIEUXUAT_CHITIET { get; set; }
-        public object Clone()
-        {
-            return this.MemberwiseClone();
-        }
+
+        public string DVT { get; set; }
+
+        public string MAHANGHOA { get; set; }
+
+        public string TENHANGHOA { get; set; }
 
         public double SOLUONGDALAY_KM { get; set; }
+
         public double SOLUONGDALAY_KM_TAM { get; set; }
+
+        public object Clone()
+        {
+            return MemberwiseClone();
+        }
     }
 }
