@@ -37,5 +37,10 @@ namespace DatabaseTHP
         public bool ISPHATSINHCONGNOTRONGKY { get; set; }
 
         public bool ISCONCONGNO { get; set; }
+        public DateTime? NGAY_PHIEUXUAT_CUOI { get; set; }
+
+        public bool ISNGAYQUAHAN { get; set; }
+
+        public double SONGAYQUAHAN { get; set; }
     }
 }
