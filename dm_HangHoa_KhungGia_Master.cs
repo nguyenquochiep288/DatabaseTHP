@@ -4,6 +4,7 @@
 // MVID: B9ADA26D-FEE8-4EBF-A8E2-7EEA7E056CE8
 // Assembly location: G:\MyApiNetCore6-03_Authentication_New\Publish_API\DatabaseTHP.dll
 
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -33,5 +34,9 @@ namespace DatabaseTHP
 
         [Required]
         public bool ISACTIVE { get; set; }
+
+        public DateTime TUNGAY { get; set; }
+
+        public DateTime DENNGAY { get; set; }
     }
 }

@@ -5,6 +5,8 @@
 // Assembly location: G:\MyApiNetCore6-03_Authentication_New\Publish_API\DatabaseTHP.dll
 
 
+using System;
+
 namespace DatabaseTHP
 {
 
@@ -23,5 +25,9 @@ namespace DatabaseTHP
         public string NAME { get; set; }
 
         public bool ISACTIVE { get; set; }
+
+        public DateTime TUNGAY { get; set; }
+
+        public DateTime DENNGAY { get; set; }
     }
 }
