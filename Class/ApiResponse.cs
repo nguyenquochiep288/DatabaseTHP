@@ -5,6 +5,8 @@
 // Assembly location: G:\MyApiNetCore6-03_Authentication_New\Publish_API\DatabaseTHP.dll
 
 
+using System;
+
 namespace DatabaseTHP
 {
 
@@ -17,6 +19,10 @@ namespace DatabaseTHP
         public object Data { get; set; }
 
         public object Expires { get; set; }
+
+        public string RefreshToken { get; set; }
+
+        public DateTime? RefreshTokenExpires { get; set; }
 
         public object Detail { get; set; }
 
