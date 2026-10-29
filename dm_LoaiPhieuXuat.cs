@@ -39,6 +39,8 @@ namespace DatabaseTHP
 
         public bool ISDEFAULT { get; set; }
 
+        public bool ISTRAHANG { get; set; }
+
         public DateTime? THOIGIANSUA { get; set; }
 
         [StringLength(50)]
